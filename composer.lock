@@ -20,6 +20,7 @@
         "ext-xml": "*",
         "ext-json": "*",
         "ext-openssl": "*",
+        "ext-mcrypt": "*",
         "ext-curl": "*",
         "ext-gd": "*",
         "ext-mbstring": "*"

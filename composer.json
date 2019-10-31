@@ -1,9 +1,14 @@
 {
-  "scripts": {
-    "compile": [
-      "chmod -R 777 rar/",
-      "chmod 777 rar/unrar",
-      "chmod 777 rar/rar"
-    ]
-  }
+    "require": {
+        "php": ">=5.6",
+        "ext-PDO": "*",
+        "ext-pdo_mysql": "*",
+        "ext-mysqli": "*",
+        "ext-xml": "*",
+        "ext-json": "*",
+        "ext-openssl": "*",
+        "ext-curl": "*",
+        "ext-gd": "*",
+        "ext-mbstring": "*"
+    }
 }

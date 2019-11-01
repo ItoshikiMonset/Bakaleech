@@ -1,6 +1,6 @@
                              User's Manual
                              ~~~~~~~~~~~~~
-                        RAR 5.71 console version
+                        RAR 5.80 console version
                         ~~~~~~~~~~~~~~~~~~~~~~~~
 
                        =-=-=-=-=-=-=-=-=-=-=-=-=-=-
@@ -294,7 +294,8 @@
 
               h - hexadecimal search;
 
-              t - use ANSI, Unicode and OEM character tables (Windows only);
+              t - use ANSI, UTF-8, UTF-16 and OEM (Windows only)
+                  character tables;
 
             If no parameters are specified, it is possible to use
             the simplified command syntax i<string> instead of i=<string>
@@ -316,8 +317,16 @@
             in rar archives in e:\texts directory.
 
 
-    k       Lock archive. Any command which intends to change the archive
-            will be ignored.
+    k       Lock archive.
+    
+            RAR cannot modify locked archives, so locking important archives
+            prevents their accidental modification by RAR. Such protection
+            might be especially useful in case of RAR commands processing
+            archives in groups.
+
+            This command is not intended or able to prevent modification
+            by other tools or willful third party. It implements a safety
+            measure only for accidental data change by RAR.
 
             Example:
 
@@ -770,6 +779,14 @@
             of the date string and base archive name are exchanged,
             so a date will precede an archive name.
 
+            If the first character in the format string is 'F', the rest of
+            string specifies the default format string for -ag switch.
+            Such -agf<default_format> switch has a practical value only
+            if placed to rar.ini configuration file or RAR environment
+            variable. For example, if we set RAR environment variable to
+            -agfYYYY-MMM-DD, we can use -ag without a parameter with 
+            YYYY-MMM-DD format string assumed.
+
             The format string may contain optional text enclosed in '{'
             and '}' characters. This text is inserted into archive name.
 
@@ -863,7 +880,7 @@
             which are not present in the list of the currently added
             files, will be deleted from the archive. It is convenient to
             use this switch in combination with -u (update) to synchronize
-            contents of an archive and an archiving directory.
+            contents of archive and archiving directory.
 
             For example, after the command:
 
@@ -1240,8 +1257,14 @@
     -iver   Display the version number and quit. You can run just "RAR -iver".
 
 
-    -k      Lock archive. Any command which intends to change the archive
-            will be ignored.
+    -k      Lock archive.
+    
+            Prevents accidental archive modification by RAR.
+            See the 'k' command description for details.
+
+            Example:
+
+            rar a -k final.rar srcfiles
 
 
     -kb     Keep broken extracted files.
@@ -2153,8 +2176,9 @@
             Format of the switch is the same as -tn<time>.
 
 
-    -ts[m,c,a][+,-,1]
-            Save or restore file time (modification, creation, access).
+    -ts[m,c,a,p][+,-,1]
+            Save or restore file time (modification, creation, access,
+            preserve).
 
             Use -tsm to save the file modification time, -tsc for creation
             time and -tsa for last access time. Multiple -ts switches,
@@ -2167,6 +2191,10 @@
             in Unix. Append '1' to set 1 second precision or '-' to not save
             a file time. If '+', '-' or '1' are not present, '+' is assumed,
             so -ts+ and -ts both save all three high precision times.
+
+            All stored times for same file always have the same precision.
+            If different precisions are specified, such as -tsm1 -tsc+,
+            common one is selected.
 
             RAR 4.x archives always contain the modification time
             and for RAR 4.x archive -tsm- still saves the modification time
@@ -2190,6 +2218,21 @@
             In Unix we can set the modification and last access, but not
             creation time.
 
+            Use -tsp switch to preserve the original last access file time
+            of source files when archiving. This switch keeps the original
+            last access time of archiving files, but it does not control
+            which timestamps are to be stored in archive. It has to be
+            combined with other -ts switches for this purpose.
+            For example, if we wish to save the last access time to archive
+            and preserve the last access time of source files, we need
+            to use -tsa -tsp together.
+
+            While -tsp is supported by RAR for Windows, it is not guaranteed
+            to work for other platforms.
+
+            It is allowed to combine several modifiers in the same switch,
+            such as -tscap instead of -tsc -tsa -tsp.
+
             Examples:
 
             1) rar a -ts backup
@@ -2203,9 +2246,11 @@
             If we wish to restore only the last access time, we should use
             -tsm- -tsa switches.
 
-            3) rar a -tsm1 -tsc1 backup
+            3) rar a -tsm1 -tsc1 -tsp backup
 
             Store low precision modification and creation times.
+            Preserve the last access time of source files.
+            Alternatively we could use -tsm1c1p instead of -tsm1 -tsc1 -tsp.
 
 
     -u      Update files. May be used with archive extraction or creation.

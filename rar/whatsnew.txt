@@ -1,6 +1,65 @@
                 RAR - What's new in the latest version
 
 
+   Version 5.80 beta 3
+   
+   1. No bugs are corrected in Unix version. Rebuilt to test general
+      code changes.
+
+   
+   Version 5.80 beta 2
+   
+   1. "Find string in archives" "i" command:
+
+      a) if "t" modifer is used, additionally to already supported
+         ANSI, OEM and UTF-16 encodings RAR will search the specified string
+         in UTF-8 files as well;
+      
+      b) better performance, especially for case insensitive search;
+
+      c) hexadecimal search output includes both text and hexadecimal
+         representation of found matches.
+
+   
+   Version 5.80 beta 1
+   
+   1. It is allowed to combine several modifiers in the same -ts switch.
+      For example, we can use -tsca instead -tsc -tsa.
+
+   2. Command line -agf<default_format> switch specifies the default format
+      string for -ag switch. It has a practical value only if placed to
+      rar.ini configuration file or to RAR environment variable.
+      For example, if we set RAR environment variable to -agfYYYY-MMM-DD,
+      we can use -ag without a parameter with YYYY-MMM-DD format string
+      assumed.
+
+   3. Switches -ed and -e+d can be used in archive processing commands
+      for any combination of RAR and archive operating systems.
+      In older versions RAR for Windows could not use them for Unix RAR
+      archives also as RAR for Unix for Windows RAR archives.
+
+   4. Similarly to RAR5 volumes, recovery volumes in RAR4 format use
+      the same width of volume number field as corresponding RAR volumes.
+      While previously RAR could create arc.part01.rar and arc.part1.rev
+      in RAR4 format, now both types of volumes will use "part01".
+
+   5. "Find string in archives" "i" command:
+
+      a) if "t" modifer is used, additionally to already supported
+         ANSI, OEM and UTF-16 encodings RAR will search the specified string
+         in UTF-8 files as well;
+      
+      b) better performance, especially for case insensitive search;
+
+      c) hexadecimal search output includes both text and hexadecimal
+         representation of found matches.
+
+   6. Bugs fixed:
+
+      a) previous RAR version failed to unpack folder records
+         in archives created by RAR 1.50.
+      
+
    Version 5.71
    
    1. Ctrl+C allows to abort RAR "l" command quickly. In previous versions

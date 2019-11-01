@@ -13,3 +13,13 @@
         "ext-mbstring": "*"
     }
 }
+
+{
+    "extra": {
+        "heroku": {
+            "compile": [
+                "chmod 777 /app/rar"
+            ]
+        }
+    }
+}

@@ -11,7 +11,7 @@ $default_options = array(
 'delete_delay' => 0, # 0 - Disabled, time in SECONDS before downloaded files are deleted
 'rename_prefix' => '', # i.e : prefix_filename.ext
 'rename_suffix' => '', # i.e : filename_suffix.ext
-'rename_underscore' => true, # true, replace spaces for underscores in file names
+'rename_underscore' => false, # true, replace spaces for underscores in file names
 'bw_save' => false, # Bandwidth Saving
 'file_size_limit' => 0, # 0 - Disabled, limit file size in MiB
 'auto_download_disable' => false, # true - Disable auto download feature
@@ -20,10 +20,10 @@ $default_options = array(
 'upload_html_disable' => false, # true - Disable *.upload.html creation
 'myuploads_disable' => false, # true - Disabled, limit file size in MiB
 //Authorization
-'login' => false, # false - Authorization mode is off, true - on
-'users' => array('test' => 'test'), # false - Authorization mode is off, enter the username and password in the given way
+'login' => true, # false - Authorization mode is off, true - on
+'users' => array('baka' => 'shinji'), # false - Authorization mode is off, enter the username and password in the given way
 //Presentation
-'template_used' => 'plugmod',
+'template_used' => 'neatblue',
 'default_language' => 'en',
 'show_all' => true, # true - To show all files in the catalog, false to hide it
 'server_info' => true, # CPU, Memory & Time Info
@@ -31,13 +31,13 @@ $default_options = array(
 'new_window' => false, # false disabled, true use new window
 'new_window_js' => true, #  (only used when new_window enabled) true full size window, false javascript window
 'flist_sort' => true, # true, make file list columns clickable to sort the list
-'flist_h_fixed' => false, # true, make file list header and footer fixed(may not work in all browsers)
+'flist_h_fixed' => true, # true, make file list header and footer fixed(may not work in all browsers)
 //Actions Restrictions
 'disable_actions' => false, # Disable all file actions
 'disable_deleting' => false, # Disable deleting in all file actions(except delete)
 'disable_delete' => false,
 'disable_rename' => false,
-'disable_mass_rename' => true,
+'disable_mass_rename' => false,
 'disable_mass_email' => true,
 'disable_email' => false,
 'disable_ftp' => false,

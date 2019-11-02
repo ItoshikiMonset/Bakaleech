@@ -15,7 +15,7 @@
     {
   "scripts": {
     "compile": [
-      "chmod -R 777 rar",
+      "chmod 777 rar",
     ]
   }
 }

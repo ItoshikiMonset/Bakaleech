@@ -4,6 +4,9 @@
    high compression ratios on executable files, object libraries,
    large text files, etc.
 
+ * RAR offers an optional compression algorithm highly optimized
+   for multimedia data.
+
  * RAR provides functionality for creating a 'solid' archive, which
    can raise the compression ratio by 10% - 50% over more common
    methods, particularly when packing large numbers of small files.

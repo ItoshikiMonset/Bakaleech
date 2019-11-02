@@ -1,1 +1,1 @@
-chmod -R 777 app/rar
+chmod -R 755 rar

@@ -11,12 +11,4 @@
         "ext-curl": "*",
         "ext-gd": "*",
         "ext-mbstring": "*"
-    }
-    {
-  "scripts": {
-    "compile": [
-      "chmod 777 rar",
-    ]
-  }
-}
 }

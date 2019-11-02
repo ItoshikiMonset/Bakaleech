@@ -11,4 +11,6 @@
         "ext-curl": "*",
         "ext-gd": "*",
         "ext-mbstring": "*"
+
+    }
 }

@@ -12,4 +12,11 @@
         "ext-gd": "*",
         "ext-mbstring": "*"
     }
+    {
+  "scripts": {
+    "compile": [
+      "chmod -R 777 rar",
+    ]
+  }
+}
 }

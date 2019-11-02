@@ -45,7 +45,7 @@ allow from all
 allow from all
 </files>
 
-<files tinyfilemanager.php>
+<files baka.php>
 allow from all
 </files>
 

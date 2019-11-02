@@ -31,4 +31,4 @@ if ($GLOBALS['options']['flist_sort']) { echo '<script src="classes/sorttable.js
 <script type="text/javascript">function toggle(b){var a=document.getElementById(b);if(a.style.display=="none"){a.style.display="block"}else{a.style.display="none"}};</script>
 </head>
 <body>
-<header><img src="http://pm1.narvii.com/5750/67c6d28f2a7d62e9d818206389c46cd298d9dc42_00.jpg" height="auto" width="369" alt="rapidleech neatblue by Itoshiki"></header><br />
+<header><img src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/neon-genesis-evangelion-1-e1561141512703-700x315.jpg" height="auto" width="auto" alt="rapidleech neatblue by Itoshiki"></header><br />

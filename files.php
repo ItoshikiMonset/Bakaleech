@@ -69,7 +69,7 @@ $default_timezone = 'Etc/UTC'; // UTC
 
 // Root path for file manager
 // use absolute path of directory i.e: '/var/www/folder' or $_SERVER['DOCUMENT_ROOT'].'/folder'
-$root_path = $_SERVER['DOCUMENT_ROOT'];
+$root_path = $_SERVER['DOCUMENT_ROOT'].'/files';
 
 // Root url for links in file manager.Relative to $http_host. Variants: '', 'path/to/subfolder'
 // Will not working if $root_path will be outside of server document root
@@ -91,7 +91,7 @@ $allowed_extensions = '';
 // Favicon path. This can be either a full url to an .PNG image, or a path based on the document root.
 // full path, e.g http://example.com/favicon.png
 // local path, e.g images/icons/favicon.png
-$favicon_path = '?img=favicon';
+$favicon_path = '/favicon.png';
 
 // Array of files and folders excluded from listing
 // e.r array('myfile.html', 'personal-folder')

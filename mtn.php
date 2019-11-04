@@ -75,7 +75,7 @@ foreach($files as $file)
     <td align="right">Minimum Height <span class="nav_text" onMouseOver="document.getElementById('help_text3').style.display='block'" onMouseOut="document.getElementById('help_text3').style.display='none'" style="cursor:help"> [*]</span> : </td><td><input type=text name=h size=3 value=100></td>
   </tr>
   <tr>
-    <td align="right">Text <span class="nav_text" onMouseOver="document.getElementById('help_text4').style.display='block'" onMouseOut="document.getElementById('help_text4').style.display='none'" style="cursor:help"> [?]</span> : </td><td><input type=text name=T size=15 value='- Ruleech.ga -'></td>
+    <td align="right">Text <span class="nav_text" onMouseOver="document.getElementById('help_text4').style.display='block'" onMouseOut="document.getElementById('help_text4').style.display='none'" style="cursor:help"> [?]</span> : </td><td><input type=text name=T size=15 value='- BPItoshiki -'></td>
   </tr>
   <tr>
     <td align="right">Background Color : </td><td><select name=k><option value=000000> Black </option>

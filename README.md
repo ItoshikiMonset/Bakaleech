@@ -1,13 +1,14 @@
 ==> For Support Related Rapidleech Visit - www.rapidleech.com 
 
 ==> Last Update - January,2016 
+Bakaleech Nov,2019 v1.31415
 
 ==> Latest Version - Rev.431 
 
-==> Active Contributors - 1
+==> Active Contributors none.
 
 ==> Notes
-* RAR5 Is Now Supported.
+* RAR5+ Stream+ Movie Thumbnailer+ File Manager Is Now Supported.
 
 ==> Script Information
 Rapid Leech is a free server transfer script for use on various popular upload/download sites such as uploaded.net, Rapidgator.net and more than 127 others. The famous Rapidleech script transfers files from Other Filehosting Servers To Your Server via your fast servers connection speed and dumps the file on your server. You may then download these files from your server anytime later.
@@ -20,3 +21,5 @@ For end-users, you may search on our forum for readily available installed scrip
 ## Deploy to Heroku
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+## Read notes.txt for further use.

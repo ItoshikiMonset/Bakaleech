@@ -13,7 +13,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.2",
+        "php": ">=7.2.20",
         "ext-pdo": "*",
         "ext-pdo_mysql": "*",
         "ext-mysqli": "*",

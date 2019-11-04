@@ -48,7 +48,7 @@ class mega_co_nz extends DownloadClass {
 	}
 
 	private function checkCryptDependences() {
-		$this->useOpenSSL = (version_compare(PHP_VERSION, '5.6.0', '>=') && extension_loaded('openssl') && in_array('AES-128-CBC', ($ossl_ciphers = openssl_get_cipher_methods()), true));
+		$this->useOpenSSL = (version_compare(PHP_VERSION, '7.2.0', '>=') && extension_loaded('openssl') && in_array('AES-128-CBC', ($ossl_ciphers = openssl_get_cipher_methods()), true));
 
 		if (!$this->useOpenSSL || !in_array('AES-128-CTR', $ossl_ciphers, true))
 		{

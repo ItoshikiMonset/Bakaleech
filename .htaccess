@@ -45,7 +45,7 @@ allow from all
 allow from all
 </files>
 
-<files baka.php>
+<files files.php>
 allow from all
 </files>
 

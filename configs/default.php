@@ -20,7 +20,7 @@ $default_options = array(
 'upload_html_disable' => false, # true - Disable *.upload.html creation
 'myuploads_disable' => false, # true - Disabled, limit file size in MiB
 //Authorization
-'login' => true, # false - Authorization mode is off, true - on
+'login' => false, # false - Authorization mode is off, true - on
 'users' => array('baka' => 'shinji'), # false - Authorization mode is off, enter the username and password in the given way
 //Presentation
 'template_used' => 'neatblue',
@@ -30,8 +30,8 @@ $default_options = array(
 'ajax_refresh' => true, # Ajax Auto Refresh Server Info
 'new_window' => false, # false disabled, true use new window
 'new_window_js' => true, #  (only used when new_window enabled) true full size window, false javascript window
-'flist_sort' => true, # true, make file list columns clickable to sort the list
-'flist_h_fixed' => true, # true, make file list header and footer fixed(may not work in all browsers)
+'flist_sort' => false, # true, make file list columns clickable to sort the list
+'flist_h_fixed' => false, # true, make file list header and footer fixed(may not work in all browsers)
 //Actions Restrictions
 'disable_actions' => false, # Disable all file actions
 'disable_deleting' => false, # Disable deleting in all file actions(except delete)
@@ -57,7 +57,7 @@ $default_options = array(
 'use_curl' => true, # true - Will use curl instead stream socket client(especially in ssl connection), disable this if filehost refuse data sended by curl. Need curl exec/extension enable in your server
 'redir' => true, # true - Redirect passive method
 'no_cache' => true, # true - Prohibition by Browser; otherwise allowed
-'ref_check' => true, # true - Disallow downloads from external referers. In some hosts this check may give false positives, disable if it doesn't let you download.
+'ref_check' => false, # true - Disallow downloads from external referers. In some hosts this check may give false positives, disable if it doesn't let you download.
 '2gb_fix' => true, # true - Try to list files bigger than 2gb on 32 bit o.s.
 'forbidden_filetypes' => array('.htaccess', '.htpasswd', '.php', '.php3', '.php4', '.php5', '.phtml', '.asp', '.aspx', '.cgi'), # Enter the forbidden filetypes in the given way
 'forbidden_filetypes_block' => false, # false - rename forbidden_filetypes, true - completely block them

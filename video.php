@@ -65,10 +65,7 @@ if (!empty($_REQUEST['file']) || !empty($_REQUEST['fileurl'])) {
 				EmbedWMP($link);
 				break;
 
-			case 'divx':
-			case 'avi':
-			case 'mkv':
-			case 'mp4':
+
 			case 'mov':
 				EmbedDX($link);
 				break;
@@ -76,7 +73,11 @@ if (!empty($_REQUEST['file']) || !empty($_REQUEST['fileurl'])) {
 			case 'webm':
 				EmbedWebM($link);
 				break;
-
+				
+			case 'divx':
+			case 'avi':
+			case 'mkv':
+			case 'mp4':
 			case 'flv':
 				EmbedFLV($link);
 				break;
@@ -135,7 +136,7 @@ function EmbedWebM($url) {
 
 function EmbedFLV($url) {
 	//704 x 368
-	echo "<object id='flowplayer' classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000' width='704' height='368'>\n\t\t<param name='movie' value='flowplayer/flowplayer-3.2.7.swf' />\n\t\t<param name='allowfullscreen' value='true' />\n\t\t<param name='flashvars' value='config={\"clip\":\"$url\"}' />\n\t\t<embed type='application/x-shockwave-flash' width='704' height='368' src='flowplayer/flowplayer-3.2.7.swf' allowfullscreen='true' flashvars='config={\"clip\":\"$url\"}'/>\n\t</object><!-- T-8:I don't wanna add js... http://flowplayer.org/demos/installation/alternate/index.html -->";
+	echo "<object id='flowplayer' classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000' width='704' height='368'>\n\t\t<param name='movie' value='flowplayer/flowplayer.swf' />\n\t\t<param name='allowfullscreen' value='true' />\n\t\t<param name='flashvars' value='config={\"clip\":\"$url\"}' />\n\t\t<embed type='application/x-shockwave-flash' width='704' height='368' src='flowplayer/flowplayer.swf' allowfullscreen='true' flashvars='config={\"clip\":\"$url\"}'/>\n\t</object><!-- T-8:I don't wanna add js... http://flowplayer.org/demos/installation/alternate/index.html -->";
 }
 
 //  Th3-822

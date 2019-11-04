@@ -1,0 +1,15 @@
+File manager + Video Stream + Zip + File upload to server
+
+https://*yourapp*.herokuapp.com/files.php
+
+Another Video Stream (Still fixing)
+
+https://*yourapp*.herokuapp.com/video.php
+
+Movie Thumbnailer (Buggie as everything)
+
+https://*yourapp*.herokuapp.com/mtc.php
+
+Mediainfo (Not release yet)
+
+https://*yourapp*.herokuapp.com/mediainfo.php
